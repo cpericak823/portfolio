@@ -42,13 +42,13 @@
                 <a href="#top" onclick=$( "#menu-close").click();>Cassandra Pericak</a>
             </li>-->
             <li>
-                <a href="#top" onclick=$( "#menu-close").click();>Home</a>
+                <a href="index.html" onclick=$( "#menu-close").click();>Home</a>
             </li>
             <li>
                 <a href="#about" onclick=$( "#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="#portfolio" onclick=$( "#menu-close").click();>Portfolio</a>
+                <a href="portfolio.html" onclick=$( "#menu-close").click();>Portfolio</a>
             </li>
             <li>
                 <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
@@ -60,12 +60,112 @@
             <div class="col-lg-12 text-center">
                 <h2>About Me</h2>
                 <img src="./img/profile.jpg">
-                <p>Hey! Thanks for visiting my site! I'm sure you want to see my work already, but before you do, here's some background information on me.</p>
-                <p>My experience consists of front-line fundraising, project management, business to client sales, and client relations. It's within my past roles, that I discovered my love for technology and how it's advances can continue to help people make their lives easier, more efficient, and ultimately more successful.
-                From here, I enrolled in a Full Stack computer coding bootcamp through Northwestern University where I learned how to use Javascript to create both frontend and backend applications.</p> <p>For frontend, I have used a combination of HTML, CSS, Handlebars, and React to create a variety of applications.</p>
-                <p>When working on backend applications, I've been able to successfully use NodeJS, MySql, and Mongo. Also, I've learned how to use ORMs such as Sequelize and Mongoose for their database counterparts.</p>
-                <p>I'm looking for new opportunities within the tech world that will allow me to bring developers, clients, and sales managers together as often times these three stakeholders don't always speak the same language or at the same pace. In order to maximize the satisfaction of clients, sales revenue, and be on the cutting edge of technology, bridging this gap is the key to success.</p>
+                <p>Hey! Thanks for visiting my site! I'm sure you want to see my work already, but before you do, here's some
+                    background information on me.</p>
+                <p>My experience consists of front-line fundraising, project management, business to client sales, and client
+                    relations. It's within my past roles, that I discovered my love for technology and how it's advances
+                    can continue to help people make their lives easier, more efficient, and ultimately more successful.
+                    From here, I enrolled in a Full Stack computer coding bootcamp through Northwestern University where
+                    I learned how to use Javascript to create both frontend and backend applications.</p>
+                <p>For frontend, I have used a combination of HTML, CSS, Handlebars, and React to create a variety of applications.</p>
+                <p>When working on backend applications, I've been able to successfully use NodeJS, MySql, and Mongo. Also,
+                    I've learned how to use ORMs such as Sequelize and Mongoose for their database counterparts.</p>
+                <p>I'm looking for new opportunities within the tech world that will allow me to bring developers, clients,
+                    and sales managers together as often times these three stakeholders don't always speak the same language
+                    or at the same pace. In order to maximize the satisfaction of clients, sales revenue, and be on the cutting
+                    edge of technology, bridging this gap is the key to success.</p>
             </div>
         </div>
     </div>
+    <!-- Call to Action -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>Contact Information</h3>
+                    <a href="cpericak823@gmail.com" class="btn btn-lg btn-dark">Email</a>
+                    <a href="https://www.linkedin.com/in/cassandrapericak" class="btn btn-lg btn-dark">LinkedIn</a>
+                    <a href="https://github.com/cpericak823" class="btn btn-lg btn-dark">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Cassandra Pericak</strong>
+                    </h4>
+                    <p>Chicago, IL 60610</p>
+
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Cassandra Pericak 2017</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function (e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function () {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function () {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function () {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function () {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+    </script>
 </body>
+
+</html>

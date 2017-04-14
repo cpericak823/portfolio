@@ -87,29 +87,31 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                <a href="https://flaneur2017.herokuapp.com">
+                                    <img class="img-portfolio img-responsive" src="img/flaneur.png">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                <a href="http://gif-tastic.herokuapp.com/">
+                                    <img class="img-portfolio img-responsive" src="img/GifTastic.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="https://radiant-dusk-82080.herokuapp.com/">
+                                    <img class="img-portfolio img-responsive" src="img/Music_Events_Near_You.png">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                <a href="https://train-scheduling.herokuapp.com/">
+                                    <img class="img-portfolio img-responsive" src="img/Train_Scheduler.png">
                                 </a>
                             </div>
                         </div>
@@ -212,26 +214,8 @@
             }
         }
     });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-            var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
-        }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
+ 
+  
     </script>
 
 </body>
