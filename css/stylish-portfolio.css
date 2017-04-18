@@ -248,3 +248,18 @@ footer {
   bottom: 5px;
   right: 5px;
 }
+.title{
+    text-align: center;
+}
+.portfolioInfo{
+    background: url(../img/about_bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.titleJumbotron{
+    text-align: center;
+    font-size: 55px;
+}
